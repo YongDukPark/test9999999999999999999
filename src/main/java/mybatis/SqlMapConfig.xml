@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+
+<!-- 만약 별칭 지정시 해당클래스 무조건 있어야함 그리고 여러개를 넣을수있다. -->
+<!-- mappers 여기서 루트컨텍스트 지정을 해준다. 여러개가 아니고 하나만 써도 여기서 써도된다. 여러개는 무조건이다. -->
+
+<configuration>	
+	<typeAliases>
+		<typeAlias type="board.model.BoardBean" alias="MyBoard"/>
+	</typeAliases>							<!-- sql result type에 쓰인다. -->
+
+
+	<mappers>
+		<mapper resource="mybatis/board.xml"/>
+	</mappers>
+</configuration>
+
